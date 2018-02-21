@@ -2,4 +2,4 @@
 applications:
 - name: pal-tracker
   path: build/libs/pal-tracker.jar
-  host: rn-pal-tracker-review
+  host: rui-niu-pal-tracker-review
