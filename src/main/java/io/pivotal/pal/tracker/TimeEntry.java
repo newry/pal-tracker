@@ -1,13 +1,25 @@
 package io.pivotal.pal.tracker;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity(name="time_entries")
 public class TimeEntry {
+    @Id
+    @GeneratedValue
     private long id;
+    @Column(name="project_id")
     private long projectId;
+    @Column(name="user_id")
     private long userId;
+    @Column(name="date")
     private LocalDate date;
+    @Column(name="hours")
     private int hours;
 
     public TimeEntry(){
@@ -67,4 +79,19 @@ public class TimeEntry {
         return Objects.hash(id, projectId, userId, date, hours);
     }
 
+    public void setProjectId(long projectId) {
+        this.projectId = projectId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
 }
