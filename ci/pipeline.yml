@@ -30,7 +30,7 @@ resources:
     username: {{cf-username}}
     password: {{cf-password}}
     organization: {{cf-org}}
-    space: review
+    space: sandbox
 
 - name: production-deployment
   type: cf
