@@ -9,6 +9,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/time-entries-jpa**");
+        super.configure(web);
+    }
+
     protected void configure(HttpSecurity http) throws Exception {
         String forceHttps = System.getenv("SECURITY_FORCE_HTTPS");
         if (forceHttps != null && forceHttps.equals("true")) {
@@ -20,6 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .csrf().disable();
+
     }
 
     @Autowired
