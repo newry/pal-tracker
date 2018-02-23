@@ -5,3 +5,4 @@ applications:
   host: runiu2-pal-tracker
   env:
     SECURITY_FORCE_HTTPS: true
+    AUTH_REQUIRED: true

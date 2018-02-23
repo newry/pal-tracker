@@ -7,3 +7,4 @@ applications:
   - tracker-database
   env:
     SECURITY_FORCE_HTTPS: true
+    AUTH_REQUIRED: true
