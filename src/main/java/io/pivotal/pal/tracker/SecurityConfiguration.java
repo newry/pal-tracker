@@ -20,12 +20,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         if (forceHttps != null && forceHttps.equals("true")) {
             http.requiresChannel().anyRequest().requiresSecure();
         }
-        http
-                .authorizeRequests().antMatchers("/**").hasRole("USER")
-                .and()
-                .httpBasic()
-                .and()
-                .csrf().disable();
+//        http
+//                .authorizeRequests().antMatchers("/**").hasRole("USER")
+//                .and()
+//                .httpBasic()
+//                .and()
+//                .csrf().disable();
 
     }
 
