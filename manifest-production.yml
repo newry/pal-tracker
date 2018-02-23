@@ -4,4 +4,4 @@ applications:
   path: build/libs/pal-tracker.jar
   host: runiu2-pal-tracker
   env:
-  - SECURITY_FORCE_HTTPS: true
+    SECURITY_FORCE_HTTPS: true
