@@ -28,6 +28,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .httpBasic()
                     .and()
                     .csrf().disable();
+        }else{
+            http.authorizeRequests().antMatchers("/**").anonymous().and().csrf().disable();
         }
 
     }
